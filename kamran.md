@@ -2,6 +2,7 @@
 layout: default
 title: "Kamran Kashef"
 ---
+<meta name="robots" content="noindex">
 <section id="services">
 	<div class="container">
 		<h2>Kamran Kashef, CFA</h2>
