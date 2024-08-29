@@ -16,6 +16,43 @@ a:hover, a:focus, a:active {
     text-decoration: none; /* Optional: Remove underline */
 }
 
+nav {
+    text-align: center; /* Centers the navigation menu */
+    margin-top: 1rem;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px; /* Adds spacing between links */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff; /* Matches the header text color */
+    font-size: 1.4rem; /* Slightly smaller than the heading */
+    padding: 0.5rem 1rem; /* Adds padding around links for better click area */
+    border-radius: 5px; /* Optional: adds rounded corners to the link background */
+    background-color: #333; /* Matches the header background or any other color to highlight */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition effect for hover */
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: #777; /* Changes background on hover */
+    color: #f4f4f4; /* Changes text color on hover */
+}
+
+nav ul li a.active {
+    font-weight: bold; /* Makes the text bold */
+    background-color: #555; /* Slightly lighter than the header background */
+}
+
 /* Basic styles */
 body {
     font-family: Arial, sans-serif;
