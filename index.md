@@ -6,7 +6,7 @@ layout: default
 ---
 <section id="services">
     <div class="container">
-        <h2>My Services</h2>
+        <h2>Kamran's Services</h2>
         <div class="service">
             <h3>Data Infrastructure Design and Development</h3>
             <p>If data is the lifeblood of a business, then infrastructure is its heart. ETL pipelines, data lakes, vendor integrations, warehousing, performance tuning, modernization, and cloud migrations form the foundational layer of a data-driven business.</p>
@@ -28,7 +28,7 @@ layout: default
         </div>
         <div class="service">
             <h3>Address Bottlenecks Efficiently</h3>
-            <p>As a solo practitioner, I can be deployed on demand to address specific issues and provide leverage when and where you need it.</p>
+            <p>As a solo practitioner, I can be deployed on demand to address specific issues and provide leverage when and where you need it.  I can set up a skunkworks project, design solutions, build models, or make engineering improvements to your data infrastructure.</p>
         </div>
         <div class="service">
             <h3>Let's Chat</h3>
