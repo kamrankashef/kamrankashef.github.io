@@ -11,7 +11,7 @@ title: "Kamran Kashef"
                 <img src='/assets/kamran.jpg' style="float: left; margin: 0 15px 15px 0; width: 300px;"/>
                 Kamran is a graduate of the University of Michigan, where he earned a Bachelor of Science in Computer Engineering and a Master of Science in Applied Interdisciplinary Mathematics. He is also a CFA charterholder.<br />
                 <br />
-                With experience at leading firms like Madison Square Garden Entertainment Corp, AQR Capital Management, Deutsche Bank, and Jump Trading, Kamran has honed a robust skill set in data engineering, software development, and machine learning. He collaborates closely with both technical and non-technical stakeholders, demonstrating a deep understanding of business operations, finance, data science, and technology.
+                With experience at leading firms like Madison Square Garden Entertainment Corp, AQR Capital Management, Deutsche Bank, and Jump Trading, Kamran has honed a robust skill set in data engineering, software development, and machine learning. He collaborates closely with both technical and non-technical stakeholders, demonstrating a deep understanding of business operations, finance, data science, and technology.<br />
                 <br />
                 Kamran's expertise allows him to deliver actionable insights and sophisticated solutions that effectively bridge the gap between technical complexities and strategic business objectives.
             </div>
