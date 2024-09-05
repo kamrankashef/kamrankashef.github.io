@@ -1,0 +1,27 @@
+/* Stylesheet for FX library version 3.0 + */
+.fx-table-fix{table-layout:fixed;width:100%;}
+.fx-hidden{visibility:hidden;}
+.fx-relative{position:relative;}
+.fx-select{overflow:hidden;display:inline-block;vertical-align:top;}
+.fx-select select{border:0;background:none;outline:none;}
+.fx-checkbox,.fx-radio{width:15px;height:15px;margin-left:-15px;display:inline-block;cursor:pointer}
+.fx-left-arrow,.fx-right-arrow{cursor:pointer;}
+.fx-bgimage{z-index:0;display:inherit;background-repeat:inherit;background-size:inherit;background-position:inherit;background-color:transparent;left:0;top:0;width:100%;height:100%;position:absolute;margin:0;}
+.fx-index{z-index:1;}
+.fx-nav{cursor:pointer;}
+.fx-mask-left{position:absolute;left:0;height:100%;top:0;}
+.fx-mask-right{position:absolute;right:0;height:100%;top:0;}
+.fx-field{display:inline-block;width:100%;position:relative;margin-bottom:15px;}
+.fx-input{background:transparent;width:95%;padding:6px 2%;position:relative;z-index:1;line-height:1.6em;}
+.fx-input:focus{transition:all 0.3s ease-in 0s;}
+.fx-input ~ label {cursor:text;}
+.fx-input:focus ~ label,.fx-input.hasData ~ label{top:-0.8em !important;z-index:2;left:2%;padding:0 3px;cursor:default;}
+.fx-input:focus ~ .description{opacity:1;transition:all 0.3s ease-in 0s;}
+.fx-field	label{transition:all 0.3s ease-in 0s;position:absolute;left:1%;top:7px;line-height:1.6em;z-index:1;padding:0 1%;}
+.fx-field	.description{opacity:0;position:absolute;top:14px;margin-top:1.6em;left:0;}
+.fx-msg{position:absolute;line-height:28px;padding-left:10px;display:inline-block;white-space: nowrap;}
+.fx-msg.mt-bad span{display:block;}
+.fx-msg.mt-good span{display:block;}
+.fx-msg.mt-ok span{display:block;}
+
+           

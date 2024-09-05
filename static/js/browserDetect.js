@@ -1,0 +1,27 @@
+/*
+browserDetect
+Copyright 2019 Alex Bobrov
+Version 1.0
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+(function(){function f(b){document.body.removeChild(document.getElementsByClassName(b)[0])}var g={c:"https://www.google.com/chrome/",f:"https://www.mozilla.org/en-US/firefox/new/",i:"https://www.microsoft.com/en-us/windows/microsoft-edge",e:"https://www.microsoft.com/en-us/windows/microsoft-edge",o:"https://www.opera.com/download",o_a:"https://www.opera.com/download",s:"https://support.apple.com/downloads/safari",v:"https://vivaldi.com/download/"},h={e:12,i:13,f:45,o:36,o_a:46,s:9,c:49,y:18.11,v:2,
+uc:12.12,samsung:5,ios:9},k={i:"Internet Explorer",e:"Edge",f:"Firefox",o:"Opera",o_a:"Opera",s:"Safari",c:"Chrome",a:"Android Browser",y:"Yandex Browser",v:"Vivaldi",uc:"UC Browser",samsung:"Samsung Internet",x:"Other",ios:"iOS",silk:"Silk"};window.Browser={get:function(b){function e(a,b){return(new RegExp(b,"i")).test(c)?a:!1}var c=navigator.userAgent.replace("_","."),a={n:"x",v:0,t:"other browser"},d;for(d in b)h[d]=b[d];a.other=e("bot","Chrome-Lighthouse|bot|spider|archiver|transcoder|crawl|checker|monitoring|prerender|screenshot|python-|php|uptime|validator|fetcher|facebook|slurp|google|yahoo|node|mail.ru|github|cloudflare|addthis|thumb|proxy|feed|fetch|favicon|link|http|scrape|seo|page|search console|AOLBuild|Teoma|Expeditor")||
+e("TV","SMART-TV|SmartTV")||e("niche browser","Falkon|Brave|Classic Browser|Dorado|LBBROWSER|Focus|waterfox|Firefox/56.2|Firefox/56.3|Whale|MIDP|k-meleon|sparrow|wii|Chromium|Puffin|Opera Mini|maxthon|maxton|dolfin|dolphin|seamonkey|opera mini|netfront|moblin|maemo|arora|kazehakase|epiphany|konqueror|rekonq|symbian|webos|PaleMoon|QupZilla|Otter|Midori|qutebrowser")||e("mobile without upgrade path or landing page","cros|kindle|tizen|silk|blackberry|bb10|RIM|PlayBook|meego|nokia|ucweb|ZuneWP7|537.85.10");
+a.mobile=/iphone|ipod|ipad|android|mobile|phone|ios|iemobile/i.test(c);b=[["CriOS.VV","c","ios"],["FxiOS.VV","f","ios"],["Trident.*rv:VV","i","i"],["Trident.VV","io","i"],["UCBrowser.VV","uc","c"],["MSIE.VV","i","i"],["Edge.VV","e","e"],["Vivaldi.VV","v","c"],["Android.*OPR.VV","o_a","c"],["OPR.VV","o","c"],["YaBrowser.VV","y","c"],["SamsungBrowser.VV","samsung","c"],["Silk.VV","silk","c"],["Chrome.VV","c","c"],["Firefox.VV","f","f"],[" OS.VV.*Safari","ios","ios"],["Version.VV.*Safari","s","s"],["Safari.VV",
+"so","s"],["Opera.*Version.VV","o"],["Opera.VV","o"]];for(d=0;d<b.length;d++)if(c.match(new RegExp(b[d][0].replace("VV","(\\d+\\.?\\d+\\.?\\d*\\.?\\d*)"),"i"))){a.n=b[d][1];break}a.fullv=RegExp.$1;a.v=parseFloat(a.fullv);/iphone|ipod|ipad|ios/i.test(c)&&(c.match(/OS.(\d+\.?\d+\.?\d*\.?\d*)/i),a.n="ios");-1<c.indexOf("Android")&&"s"===a.n&&(b=parseInt((/WebKit\/([0-9]+)/i.exec(c)||0)[1],10)||2E3,534>=b&&(a.n="a",a.fullv=a.v=b,a.is_insecure=!0));"so"===a.n&&(a.v=a.fullv=4,a.n="s");"io"===a.n&&(a.n=
+"i",a.v=6<a.v?11:5<a.v?10:4<a.v?9:3.1<a.v?8:3<a.v?7:9,a.fullv=a.v);a.t=k[a.n];a.update=a.other?!1:a.v<h[a.n]?!0:!1;return this.info=a},info:null,warn:function(b,e){this.info||this.get();if(this.info.update&&(-1==document.cookie.indexOf("browserupdate=true")||0>b)){var c={background:"#0078d7",color:"#fff",font:"Verdana,Arial",autoclose:0};for(a in e)c[a]=e[a];b||(b=60);0<b&&(document.cookie="browserupdate=true; expires="+(new Date((new Date).getTime()+36E3*b)).toGMTString()+"; path=/");var a=document.createElement("div");
+a.className="browser-warning";a.innerHTML="<p>Your "+this.info.t+" web browser is out of date. "+(g[this.info.n]?'<a href="'+g[this.info.n]+'" target="_blank">Click here</a> to update':"Update")+' your browser for the best possible security, speed and user experience on this site.</p><a class="wclose" onclick="javascript:Browser.close_warning()">X</a>';document.body.appendChild(a);a=document.createElement("style");a.innerHTML=".browser-warning{z-index:10000;font-family:"+c.font+";max-height:0;overflow:hidden;position:fixed;top:0;left:0;width:100%;padding:0 60px;background-color:"+
+c.background+";box-shadow:3px 3px 3px #ccc;color:"+c.color+";z-index:1010;box-sizing:border-box;text-align:center;transition:max-height 0.5s ease-out}.browser-warning p{padding:30px 0;margin:0;}.browser-warning a{color:"+c.color+";}.browser-warning .wclose{position:absolute;right:10px;font-size:40px;top:20px;line-height:40px;text-decoration:none;cursor:pointer;}";a.className="browser-warning-c1";document.body.appendChild(a);setTimeout(function(){var a=document.createElement("style");a.innerHTML=".browser-warning{max-height:200px}";
+a.className="browser-warning-c2";document.body.appendChild(a)},1E3);if(c.autoclose){var d=this;setTimeout(function(){d.close_warning()},c.autoclose)}}},close_warning:function(){f("browser-warning");f("browser-warning-c1");f("browser-warning-c2")}}})();

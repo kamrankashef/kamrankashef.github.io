@@ -1,0 +1,1 @@
+if (typeof jmodule == 'undefined') var jmodule={};
